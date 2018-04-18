@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 # Python 内置的一种数据类型时列表： list。list是一种有序的集合，
 # 可以随时添加和删除其中的元素
-print '====================list===================='
+
+'''====================list===================='''
 classmamtes = ['Michael', 'Bob', 'Tracy']
 print classmamtes
 print len(classmamtes)
@@ -32,36 +33,7 @@ print '====================tuple===================='
 t = (1, )
 print t
 
-# 集合 set : 集合的元素没有顺序，且不会重复，基本用途有 成员测试和消除重复的条目
-# 集合支持交集、并集、差和对称差等运算
-# 创建集合使用： 花括号 或者 set() 函数，
-# 注意： 若要创建一个空集合必须使用 set()函数， {}将创建一个空字典
-print '====================set===================='
-basket = {'apple', 'orange', 'apple', 'pear', 'banana'}
-print basket
-fruit = set(basket) # create a set without duplicates
-print 'orange' in fruit # 验证是否存在指定元素 
-fruit.add('watermelon') # add 添加集合元素
-fruit.remove('apple')   # remove 删除集合元素 
-a = set('aujbcxgfdensa')
-b = set('sdjcbheriy')
-c = a - b
-print a
-print c
-a = {x for x in 'asdhcnhjgue' if x not in 'abc'} # 集合支持列表推导式
 
-# dict：
-print '====================dict===================='
-scores = {'Michael': 97, 'Bob': 76, 'Tracy': 98}
-newDict = dict([('space', 4139), ('guodi', 4127), ('jack', 9436)]) # 字典构造函数创建字典
-dic2 = dict(sape=4752, gsh=3652, jack=23767) # 通过关键字参数指定 键 - 值 
-dic = {x: x**2 for x in (2, 4, 6)} # 字典推导式创建字典 
-print scores
-
-scores['Adam'] = 78
-print scores
-
-del scores['Bob'] # 用 del 删除 键值对
 
 # 注意 set 跟 dict 都不可放入可变对象，因为无法判断两个可变对象是否相等，
 # 也就无法保证 set 内部 ‘不会’ 有重复元素
