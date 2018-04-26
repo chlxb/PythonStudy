@@ -143,16 +143,6 @@ s = "I am, writing\npython\tbook on line"
 new = s.split() # split 不带参数时，默认见到任何分割符号，就用其分割
 
 
-# 另一种有序列表叫元组， tuple。tuple 和 list 类似，
-# 但是 tuple 一旦初始化就不能修改。
-# 定义 tuple, t = (1, 2, 3), 定义一个空 tuple, t = ()
-# 但是定义一个只有 1 个元素的 tuple，不能写成 t = (1) // 会默认为 1 这个数组
-print '====================tuple===================='
-t = (1, )
-print t
-
-
-
 # 注意 set 跟 dict 都不可放入可变对象，因为无法判断两个可变对象是否相等，
 # 也就无法保证 set 内部 ‘不会’ 有重复元素
 scores['list'] = list
