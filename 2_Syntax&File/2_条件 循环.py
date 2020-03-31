@@ -125,3 +125,34 @@ for g in girls:
 # print([b+'+'+g for b in boys for g in letterGirls[b[0]] if b[0] in letterGirls])  # 此种写法会奔溃，因为 'k' 在letterGirls 中不存在
 print([b+'+'+g for b in boys if b[0] in letterGirls for g in letterGirls[b[0]]])  # 应该把 if 放在 for 前面
 
+
+# pass del exce eval
+# pass 什么都不执行
+for n in range(10):
+    if n % 2 == 0:
+        pass
+    else:
+        print(n)
+
+# del 对不想使用的变量进行删除 删除该变量 但不删除改变亮指向的值
+test = 'hello world'
+test1 = test
+del(test)
+# print('test: ' + test) # 该语句会报错
+print('test1: ' + test1)
+
+# exec “函数exec 将字符串作为代码执行。” 
+exec('print("execute print string")')
+# 使用命名空间避免 污染命名空间 如下：test1 被修改
+exec('test1 = "hello hahaha"')
+print('test1: ' + test1)
+scope = {}
+exec('test1 = "i am python"', scope)
+print('test1 in scope: ' + scope['test1'])
+
+# eval 是一个类似于exec 的内置函数。exec 执行一系列Python语句，而eval 计算用字符串表示的Python表达式的值，
+# 并返回结果（exec 什么都不返回，因为它本身是条语句）。例如，你可使用如下代码来创建一个Python计算器：
+evalValue = eval(input("Enter an arithmetic expression: "))
+print(evalValue)
+
+
