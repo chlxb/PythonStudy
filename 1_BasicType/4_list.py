@@ -14,18 +14,18 @@ len(classmamtes) # 获取列表长度
 # 2 索引  通过索引可以访问列表中的所有数据， 索引从0开始, 最后一个
 # 元素的索引是 length-1, 取得最后一个元素，除了计算索引位置外，还
 # 可以使用 -1 做索引，依次类推，可以 -2 可以获得倒数第二；-3 ……
-print classmamtes[-1]   # 从尾部开始
+print(lassmamtes[-1])   # 从尾部开始
 
 # 3 切片
 # 正向操作 
 sub = classmamtes[:2] 
-print "切片 :2{0}".format(sub)
+print("切片 :2{0}".format(sub))
 sub = classmamtes[0][2:5]   # 进行二次切片
-print "二次 切片结果 {0}".format(sub)
+print("二次 切片结果 {0}".format(sub))
 
 # 反向操作
-print "反向切片 :{0}".format(classmamtes[-1: -3])   
-print "反向切片 :{0}".format(classmamtes[-2: ])     # 切片时，前面的索引一定要不大于后面的索引
+print("反向切片 :{0}".format(classmamtes[-1: -3]))
+print("反向切片 :{0}".format(classmamtes[-2: ]))     # 切片时，前面的索引一定要不大于后面的索引
 
 # 4 反转 
 # 注： 此处的反转是生成与列表元素顺序相反的新列表
