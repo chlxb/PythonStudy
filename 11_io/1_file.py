@@ -19,16 +19,13 @@
 '''
 
 '''
-    文件的基本方法：
+    2. 文件的基本方法：
         打开 open
         写入 write
         读取 read  read(4)读取4字符， read 每次会从上次读取的位置开始继续读取。
 
 '''
 
-'''
-    使用管道重定向输出:
-'''
 def io_test():
     # 尝试打开一个不存在或路径错误的文件，报异常
     f = open('../somefile1.txt')
@@ -65,7 +62,25 @@ words = text.split()
 wordcount = len(words)
 print('word count: ', wordcount)
 
+'''
+    3 使用管道重定向输出:
+    cat somefile.txt| python3 somescript.py # 通过指定脚本 统计指定文件的单词数量
+'''
 # 终端执行管道操作 
 # cat somefile.txt | python3 1_file.py 统计somefile.txt的单词数量
 
 
+'''
+    4 随机存取： seek tell 
+    seek(offset[, whence]) 将当前位置移到 offset和whence指定地方，
+        offset: 指定字节（字符）数
+        whence: 默认为 io.SEEK_END (0) -- 偏移量是相对于文件开头
+                io.SEEK_CUR (1) -- 相对于当前位置
+                io.SEEK_END (2) -- 相对于文件尾
+    tell() 返回当前位于文件的什么位置
+    readlines() 读取行 
+    writelines() 写入行 
+'''
+
+with open('somefile.txt') as somefile:
+    print('readline: ', somefile.readline())
